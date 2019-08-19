@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a webform actions.
+ *
+ * @see template_preprocess_webform_actions()
+ * @see \Drupal\webform\WebformSubmissionForm::actionsElement
+ * @see \Drupal\webform\WebformSubmissionForm::actions
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="field is-horizontal">
+    <div class="field-label is-normal">
+        <label>&nbsp;</label>
+    </div>
+    <div class="field-body">
+        <div class="field">
+            {{ element }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<?php
+    /**
+     * @param $suggestions
+     * @param array $variables
+     */
+    function bulma_theme_suggestions_input_alter(&$suggestions, array $variables) {
+        $element = $variables['element'];
+        if (isset($element['#attributes']['data-twig-suggestion'])) {
+            $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
+        }
+    }
+
+    /**
+     *
+     */
+    function bulma_preprocess_page(array &$variables) {
+        // Load the site name out of configuration.
+        $config = \Drupal::config('system.site');
+        $variables['site_name'] = $config->get('name');
+        $variables['site_slogan'] = $config->get('slogan');
+
+        $request = \Drupal::request();
+        if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+            $variables['page_title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
+        }
+    }
