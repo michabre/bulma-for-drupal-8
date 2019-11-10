@@ -2,6 +2,5 @@ global-styling:
   version: 1.x
   css:
     theme:
-      https://fonts.googleapis.com/css?family=Bangers&display=swap: { external:true }
-      vendor/bulma-0.7.4/css/bulma.min.css: { minified:true }
+      vendor/bulma/css/bulma.min.css: { minified:true }
       css/styles.min.css: { minified: true }
