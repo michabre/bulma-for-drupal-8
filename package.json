@@ -15,7 +15,8 @@
     "gulp-plumber": "^1.2.*",
     "gulp-postcss": "^8.*",
     "gulp-rename": "^1.4.*",
-    "gulp-sass": "^4.*",
-    "node-sass": "^4.12.0"
+    "gulp-sass": "^4.0.2",
+    "kind-of": ">=6.0.3",
+    "node-sass": "^4.13.1"
   }
 }
